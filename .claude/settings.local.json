@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/aksha/**)",
+      "Bash(npm install)",
+      "Bash(copy .env.example .env)",
+      "Bash(cat:*)",
+      "Bash(npm run dev:*)",
+      "Bash(mysql:*)",
+      "Read(//c//**)",
+      "Bash(where mysql:*)",
+      "Bash(\"C:/xampp/mysql/bin/mysql.exe\" -u root -e \"CREATE DATABASE IF NOT EXISTS store_rating_db; SHOW DATABASES;\")",
+      "Bash(\"C:/xampp/mysql/bin/mysql.exe\" -u root store_rating_db -e \"SHOW TABLES; SELECT COUNT(*) as admin_count FROM users WHERE role=''admin'';\")",
+      "Bash(nc:*)",
+      "Bash(npm start)",
+      "Bash(\"C:/xampp/mysql/bin/mysql.exe\" -u root store_rating_db -e \"SELECT id, name, email, role FROM users WHERE role=''admin'';\")",
+      "Bash(\"C:/xampp/mysql/bin/mysql.exe\" -u root store_rating_db -e \"SELECT password FROM users WHERE email=''admin@system.com'';\")",
+      "Bash(node:*)",
+      "Bash(\"C:/xampp/mysql/bin/mysql.exe\" -u root store_rating_db -e \"UPDATE users SET password=''$2a$10$Pdx29ekHBLlXzOjTL/BHKuCsi6trvoJGnah.klzeurPqVNkcx6yce'' WHERE email=''admin@system.com''; SELECT ''Password updated successfully'' as result;\")",
+      "Bash(curl:*)",
+      "Bash(\"C:/xampp/mysql/bin/mysql.exe\" -u root store_rating_db -e \"DELETE FROM users WHERE email=''admin@system.com'';\")",
+      "Bash(\"C:/xampp/mysql/bin/mysql.exe\" -u root store_rating_db -e \"INSERT INTO users (name, email, password, address, role) VALUES (''System Administrator Account'', ''admin@system.com'', ''$2a$10$Pdx29ekHBLlXzOjTL/BHKuCsi6trvoJGnah.klzeurPqVNkcx6yce'', ''123 Admin Street, System City, Country'', ''admin''); SELECT ''Admin user created'' as result;\")",
+      "Bash(\"C:/xampp/mysql/bin/mysql.exe\" -u root store_rating_db -e \"UPDATE users SET password=''$2a$10$43YItjOjQ5Sm7hL/xr3m4eGPdgjN75ykk3LlilsxV67L.QuEDyGNO'' WHERE email=''admin@system.com''; SELECT ''Password updated successfully'' as result;\")",
+      "Bash(\"C:/xampp/mysql/bin/mysql.exe\":*)",
+      "Bash(\"C:/xampp/mysql/bin/mysql.exe\" -u root store_rating_db -e \"SELECT LEFT(password, 30) as password_start FROM users WHERE email=''admin@system.com'';\")",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
